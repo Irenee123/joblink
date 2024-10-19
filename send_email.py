@@ -5,9 +5,9 @@ from email.mime.multipart import MIMEMultipart
 
 def send_mail(to, sub, msg):
     # Set up the parameters
-    sender_email = 'educonnect_jobs@outlook.com'
+    sender_email = 'joblink@outlook.com'
     receiver_email = to
-    password = 'educonnect@123'
+    password = 'joblink@123'
     subject = sub
     body = msg
 

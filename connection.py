@@ -2,7 +2,7 @@ import mysql.connector
 import sys
 lists = []
 try:  # check if there is error 
-    con = mysql.connector.connect(host="localhost", username="root", password="", database="edu_connect")  # create connection
+    con = mysql.connector.connect(host="localhost", username="root", password="", database="joblink")  # create connection
     if con.is_connected():  # check if successfully connected
         db = con.cursor()  # hold connection response and data
         db.execute("SELECT * FROM users")  # Select All Students

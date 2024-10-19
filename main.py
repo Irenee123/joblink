@@ -27,7 +27,7 @@ def clear_screen():
         os.system('clear')
 
 
-class EduConnect:
+class joblink:
     def __init__(self, choice):
         if choice == "1":
             load()
@@ -96,7 +96,7 @@ class EduConnect:
             # otp Code For Email
             msg = (f"Hello {name},\n\nYour verification code is: {code} "
                    f"If you did not request this code, please ignore this message."
-                   " Welcome aboard!\n\nBest regards,\n Edu Connect")
+                   " Welcome aboard!\n\nBest regards,\n Job Link")
             if send_mail(to=email, sub="Account Creation Successful", msg=msg):
                 if code == int(input("\n\033[1m\033[31mEnter Verification Code Sent to your email\033[0m")):
                     # register user to database
@@ -113,7 +113,7 @@ class EduConnect:
                             load()
                             clear_screen()
                             msg = (f"Hello {name},\n\nYour account has been successfully created."
-                                   " Welcome aboard!\n\nBest regards,\n Edu Connect")
+                                   " Welcome aboard!\n\nBest regards,\n Job Link")
                             if send_mail(to=email, sub="Account Creation Successful", msg=msg):
                                 print("\033[1m\033[32m Successfully Registered Login Now \033[0m")
                                 self.sign_in(self)  # call the login page if user is inserted well
@@ -286,8 +286,8 @@ class EduConnect:
                             f" been successfully submitted.\n"
                             f"We kindly request you to await further instructions from {cp_name} regarding"
                             f" the submission of necessary documents.\n\n"
-                            f"Thank you for choosing Edu Connect as your platform for opportunities.\n\n"
-                            f"Best regards,\nEdu Connect Team\n")
+                            f"Thank you for choosing Job Link as your platform for opportunities.\n\n"
+                            f"Best regards,\nJob Link Team\n")
 
                     sub2 = f"Regarding Application for Your Posted Job"
                     msg2 = (f"Dear {cp_name},\n"
@@ -296,8 +296,8 @@ class EduConnect:
                             f"has recently submitted an application for one of the job you posted on our platform.\n"
                             f"We encourage you to connect with them for any additional requirements or "
                             f"further information.\n\n"
-                            f"Thank you for considering Edu Connect as your platform of choice.\n\n"
-                            f"Best regards,\nEdu Connect Team\n")
+                            f"Thank you for considering Job Link as your platform of choice.\n\n"
+                            f"Best regards,\nJob Link Team\n")
 
                     # send email to user
                     if send_mail(to=self.email, sub=sub1, msg=msg1):
@@ -500,14 +500,14 @@ def main():
     logo()
     # Remove pass and add menu 
     print(
-        "\n\033[1m\033[34m --- Welcome\033[0m \033[1m\033[33mto \033[0m\033[1m\033[36mEduConnect\033[0m "
+        "\n\033[1m\033[34m --- Welcome\033[0m \033[1m\033[33mto \033[0m\033[1m\033[36mjoblink\033[0m "
         "\033[1m\033[35mJobs---\033[0m\n")
     print("\033[1m\033[35mChoose from the above\033[m\n")
     print("\033[1m\033[31m [1]\033[0m \033[1m\033[34mSign Up\033[0m")
     print("\033[1m\033[31m [2]\033[0m \033[1m\033[34mSign In\033[0m")
     print("\033[1m\033[31m [3]\033[0m \033[1m\033[34mExit\033[0m")
     choices = input("\n\033[1m\033[34mEnter Choice:\033[0m ")
-    EduConnect(choices)
+    joblink(choices)
 
 
 main()

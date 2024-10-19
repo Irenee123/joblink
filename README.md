@@ -1,4 +1,4 @@
-# EduConnect Jobs
+# Job Link
 
 Welcome to Job Link, a platform designed to link employers and potential employees based on their educational backgrounds.
 
